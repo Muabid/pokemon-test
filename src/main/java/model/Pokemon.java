@@ -1,4 +1,4 @@
-package pokemons;
+package model;
 
 import javax.ws.rs.core.MediaType;
 
@@ -11,12 +11,11 @@ public class Pokemon {
 	@SerializedName("name")
 	private String name;
 	
-	@SerializedName("sprites")
-	private Album pics;
-	
-	public Pokemon(String name, Album pics) {
+	@SerializedName("url")
+	String url;
+	public Pokemon(String name, String url) {
 		this.name=name;
-		this.pics=pics;
+		this.url=url;
 	}
 	
 
@@ -28,8 +27,12 @@ public class Pokemon {
 		this.name = name;
 	}
 
-	public String getProfilePic() {
-		return pics.getFrontDefault();
+	public String getId() {
+		return url.substring(url.length()-3, url.length()-1);
+	}
+	
+	public String getPic() {
+		return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+getId()+".png";
 	}
 	
 }
