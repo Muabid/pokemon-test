@@ -1,21 +1,25 @@
 package pokemons;
 
+import javax.ws.rs.core.MediaType;
+
 import com.google.gson.annotations.SerializedName;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
 
 public class Pokemon {
 
 	@SerializedName("name")
 	private String name;
 	
-	@SerializedName("url")
-	private String url;
+	@SerializedName("sprites")
+	private Album pics;
 	
-	public Pokemon(String name, String url) {
+	public Pokemon(String name, Album pics) {
 		this.name=name;
-		this.url=url;
+		this.pics=pics;
 	}
 	
-	
+
 	public String getName() {
 		return name;
 	}
@@ -24,14 +28,8 @@ public class Pokemon {
 		this.name = name;
 	}
 
-	public String getUrl() {
-		return url;
+	public String getProfilePic() {
+		return pics.getFrontDefault();
 	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	
 	
 }
