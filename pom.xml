@@ -13,7 +13,7 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-		</plugins>
+		</plugins>	
 	</build>
 	<dependencies>
 		<dependency>
@@ -60,7 +60,11 @@
 			<version>0.5</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.21</version>
+		</dependency>
 		<dependency>
 			<groupId>com.github.jknack</groupId>
 			<artifactId>handlebars-helpers</artifactId>
