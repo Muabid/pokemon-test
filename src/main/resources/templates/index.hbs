@@ -10,34 +10,50 @@
 
 	<body>
 		<div class="container">	
-			<h2>Pokemon finder</h2>
+			<h1>Pokemon finder</h1>
 		
-			  <h5>El que quiere Pokemons, que los busque</h5>
-			  <form  action="/">
+			  <h4>El que quiere Pokemons, que los busque</h4>
+			  <form  action="/" method="POST">
+			 
 			    <div class="form-group-inline">
-			    	<label for="pok" class="col-sm-2 col-form-label"></label>
-			      		<input type="text" class="form-control" id="pok" placeholder="Ingrese el nombre a buscar" name="pok">
-			   			<button type="submit" class="btn btn-default">Submit</button>
+			    	<label for="nam" class="col-sm-2 col-form-label"></label>
+			    		<table class="table table-striped">
+			    		
+			      		<td><input type="text" class="form-control" id="nam" placeholder="Ingrese el nombre a buscar" name="nam"></td>
+			   			<td><button type="submit" class="btn btn-default">Buscar</button></td>
 			    </div>
-			   
+		   
 			  </form>
-			
+		</div>	
 	
-			
-				<table class="table table-condensed">
+		<div class="container">	
+				<table class="table table-striped">
 					<thead>
 						<tr>
-							<th style="width: 20%"> Foto </th>
-							<th style="width: 20%"> Nombre </th>
+							<th style="width: 20%" class="h3" > Foto </th>
+							<th style="width: 20%" class="h3"> Nombre </th>
 						</tr>
 					</thead>
 						{{#each pokemons}}
 						<tr>
-							<td><img src={{pic}} class="img-rounded" alt=""></td>
-							<td>{{name}}</td>
+							<td><img src={{pic}} class="img-rounded" alt="No disponible"></td>
+							<td class="h4 align-self-center">{{name}}</td>
 						</tr>
 						{{/each}}
 				</table>
 			</div>
+			
+			</div>	
+			 <footer class="footer">
+      		 	<div class="container">
+    				<div class="col-xs-12 col-md-6"><p class="h4 text-left">Hecho por Bruno</p></div >
+         			<div class="col-xs-12 col-md-6"><a href="https://github.com/Muabid/pokemon-test" class="btn btn-primary btn-lg " role="button" aria-disabled="true">Link a mí repo</a></div>
+     		   </div>
+  				
+       		
+    </footer>
 	</body>
+	
+	
+	
 </html>

@@ -13,6 +13,7 @@ public class Pokemon {
 	
 	@SerializedName("url")
 	String url;
+	
 	public Pokemon(String name, String url) {
 		this.name=name;
 		this.url=url;
@@ -20,19 +21,13 @@ public class Pokemon {
 	
 
 	public String getName() {
-		return name;
+		return name.replace('-', ' ');
 	}
 
 	public void setName(String name) {
 		this.name = name;
 	}
 	
-	public static void main(String []argv) {
-		String str="https://pokeapi.co/api/v2/pokemon/10080/";
-		Pokemon p=new Pokemon("Pikca",str);
-		System.out.println(p.getPic());
-	}
-
 	public String getId() {
 		String str=url.substring(0, url.length()-1);
 		return str.substring(str.lastIndexOf("/")+1);

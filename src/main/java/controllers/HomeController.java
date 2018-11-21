@@ -14,8 +14,16 @@ public class HomeController {
 
 	public static ModelAndView index(Request req, Response res) {
 		Map<String,Object> view=new HashMap<>();
-		List<Pokemon> pokemons= new PokeRepo().searchBySubName("pika");
+		
+		return new ModelAndView(view, "index.hbs");
+	}
+	
+	public static ModelAndView search(Request req, Response res) {
+		Map<String,Object> view=new HashMap<>();
+		String subname= req.queryParams("nam");
+		List<Pokemon> pokemons= new PokeRepo().searchBySubName(subname);
 		view.put("pokemons",pokemons);
 		return new ModelAndView(view, "index.hbs");
+
 	}
 }
