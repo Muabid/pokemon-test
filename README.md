@@ -20,7 +20,7 @@ mvn package
 ```
 
 
-Para correr el servidor
+Correr el servidor
 
 ```
 mvn exec:java -Dexec.mainClass="web.Server"
