@@ -28,3 +28,8 @@ mvn exec:java -Dexec.mainClass="web.Server"
 
 #Usar en el navegador
 
+Entrar a:
+
+```
+http://localhost:9000
+```
