@@ -26,7 +26,7 @@ Para correr el servidor
 mvn exec:java -Dexec.mainClass="web.Server"
 ```
 
-#Usar en el navegador
+# Usar en el navegador
 
 Entrar a:
 
