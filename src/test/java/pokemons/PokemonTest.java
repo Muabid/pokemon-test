@@ -10,8 +10,10 @@ import utils.PokeRepo;
 public class PokemonTest {
 	Pokemon bulbasaur;
 	PokeRepo repo;
+	
 	@Before
 	public void init() {
+		repo=new PokeRepo();
 		bulbasaur=repo.searchBySubName("bulbasaur").get(0);
 	}
 	

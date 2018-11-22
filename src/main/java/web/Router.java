@@ -18,7 +18,7 @@ public class Router
 
 		Spark.staticFiles.location("/public");
 		Spark.get("/",HomeController::index,engine);
-		Spark.post("/", HomeController::search,engine);
+		Spark.get("/pokemons", HomeController::search,engine);
 	}
 
 }
